@@ -1,8 +1,8 @@
 class CreatePartners < ActiveRecord::Migration[6.1]
   def change
     create_table :partners do |t|
-      t.string :name
-      t.string :token
+      t.text :name
+      t.text :token
 
       t.timestamps
     end

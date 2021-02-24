@@ -12,16 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2021_02_24_030922) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "partners", force: :cascade do |t|
-    t.string "name"
-    t.string "token"
+    t.text "name"
+    t.text "token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "properties", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
+    t.text "name"
+    t.text "description"
     t.integer "rental_price"
     t.integer "tennant_id"
     t.datetime "created_at", precision: 6, null: false
@@ -30,10 +33,10 @@ ActiveRecord::Schema.define(version: 2021_02_24_030922) do
   end
 
   create_table "tennants", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
+    t.text "name"
+    t.text "email"
     t.integer "phone"
-    t.string "availability"
+    t.text "availability"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
