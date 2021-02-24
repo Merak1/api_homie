@@ -1,16 +1,10 @@
 class ApplicationController < ActionController::API
-  # before_action :ghetto_jwt
+  include ActionController::HttpAuthentication::Basic::ControllerMethods
+  before_action :authenticate
 
-  # def ghetto_jwt
-  #   token = request.headers["TOKEN"]
-  #   head :forbidden unless token
-  #   head :forbidden unless valid_token(token)
-  # end
-
-  # private
-
-  # def valid_token(token)
-  #   test = "555"
-  #   token == test
-  # end
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      !Partner.find_by(name: username, token: password).nil?
+    end
+  end
 end

@@ -1,3 +1,13 @@
+# Partners
+
+_partner1 = Partner.create(
+  name:  "partner1",
+  token: "123"
+)
+_partner2 = Partner.create(
+  name:  "partner2",
+  token: "123"
+)
 # tennants
 tennant1 = Tennant.create(
   name:         "David Tennant",
