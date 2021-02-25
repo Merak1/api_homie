@@ -33,7 +33,7 @@ If it says something like `Rails 6.1.3` you are good to go.
 
 If you seem to have problems to install both ruby or rails so far you can check [this link ](https://railskey.wordpress.com/2013/11/20/setup-ruby-on-rails-on-ubuntu/ "really good ubuntu guide"), its a really well explained guide to install rails on ubuntu.
 
-### Installing Postgres ???
+
 ### Cloning and running the code locally
 
 *To download the project you simply clone the git repository 
